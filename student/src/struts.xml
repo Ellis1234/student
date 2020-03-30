@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+    <package name="student" namespace="" extends="struts-default">
+    	<!-- ==== 用户登录功能 ==== -->
+        <action name="Login" class="action.login">
+            <result>/index.jsp</result>
+            <result name="input">/login.jsp</result>
+        </action>
+        <!-- ==== 用户注册页面 ==== -->
+        <action name="Register" class="">
+            <result>/register.jsp</result>
+        </action>
+        <!-- ==== 用户注册功能 ==== -->
+        <action name="Register1" class="action.register">
+            <result>/login.jsp</result>
+            <result name="SUCCESS">/register.jsp</result>
+        </action>
+        <!-- ==== 院系信息管理功能 ==== -->
+        <action name="department" class="action.department">
+            <result>/department.jsp</result>
+        </action>
+        <!-- ==== 学生信息管理功能 ==== -->
+        <action name="information" class="action.information">
+            <result>/information.jsp</result>
+        </action>
+        <!-- ==== 课程管理功能 ==== -->
+        <action name="course" class="action.course">
+            <result>/course.jsp</result>
+        </action>
+        <!-- ==== 成绩管理功能 ==== -->
+        <action name="grade" class="action.grade">
+            <result>/grade.jsp</result>
+        </action>
+        <!-- ==== 用户修改功能 ==== -->
+        <action name="adminUpdate" class="action.admin">
+            <result>/update/adminUpdate.jsp</result>
+        </action>
+        <!-- ==== 院系修改功能 ==== -->
+        <action name="departmentUpdate" class="action.departmentUpdate">
+            <result>/update/departmentUpdate.jsp</result>
+        </action>
+        <!-- ==== 课程修改功能 ==== -->
+        <action name="courseUpdate" class="action.courseUpdate">
+            <result>/update/courseUpdate.jsp</result>
+        </action>
+        <!-- ==== 成绩修改功能 ==== -->
+        <action name="gradeUpdate" class="action.gradeUpdate">
+            <result>/update/gradeUpdate.jsp</result>
+        </action>
+        <!-- ==== 学生信息修改功能 ==== -->
+        <action name="studentUpdate" class="action.informationUpdate">
+            <result>/update/studentUpdate.jsp</result>
+        </action>
+        <!-- ==== 学生信息 ==== -->
+        <action name="student" class="action.information">
+            <result>/student.jsp</result>
+        </action>
+    </package>
+</struts>
